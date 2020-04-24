@@ -30,13 +30,13 @@ class App extends Component {
   render() {
     return (
       <Switch>
-        <Router basename="/studyabroad-demo">
+        <Router basename={process.env.PUBLIC_URL}>
           <Security {...config}>
             <NavBar />
             <div className="container">
-              <Route exact path="process.env.PUBLIC_URL + '/'" component={Home} />
-              <Route path="process.env.PUBLIC_URL + '/implicit/callback'" component={LoginCallback} />
-              <SecureRoute exact path="process.env.PUBLIC_URL + '/admin-dashboard'" component={AdminDashboard} />
+              <Route exact path="/" component={Home} />
+              <Route path='/implicit/callback' component={LoginCallback} />
+              <SecureRoute exact path="/admin-dashboard" component={AdminDashboard} />
             </div>
           </Security>
         </Router>
