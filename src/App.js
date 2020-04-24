@@ -35,7 +35,7 @@ class App extends Component {
           <div className="container">
             <Route exact path="/" component={Home} />
             <Route path='/implicit/callback' component={LoginCallback} />
-            <SecureRoute path="/admin-dashboard" component={AdminDashboard} />
+            <SecureRoute exact path="/admin-dashboard" component={AdminDashboard} />
           </div>
         </Security>
       </Router>
