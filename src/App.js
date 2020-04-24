@@ -12,7 +12,7 @@ const OKTA_DOMAIN = 'dev-228327.okta.com';
 const CLIENT_ID = '0oa5ecwl6wmPJFY0l4x6';
 const CALLBACK_PATH = '/implicit/callback';
 const ISSUER = `https://${OKTA_DOMAIN}/oauth2/default`;
-const HOST = window.location.hostname;
+const HOST = window.location.host;
 const REDIRECT_URI = `http://${HOST}${CALLBACK_PATH}`;
 const SCOPES = 'openid profile email';
 /* Our config variable that stores information to be used by the Security tag, courtesy of Okta */
