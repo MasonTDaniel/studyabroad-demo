@@ -33,9 +33,9 @@ class App extends Component {
         <Security {...config}>
           <NavBar />
           <div className="container">
-            <Route exact path="/" component={Home} />
+            <Route path="/" component={Home} />
             <Route path='/implicit/callback' component={LoginCallback} />
-            <SecureRoute exact path="/admin-dashboard" component={AdminDashboard} />
+            <SecureRoute path="/admin-dashboard" component={AdminDashboard} />
           </div>
         </Security>
       </Router>
