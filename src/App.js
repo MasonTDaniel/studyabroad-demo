@@ -19,7 +19,7 @@ const SCOPES = 'openid profile email';
 const config = {
   issuer: ISSUER,
   clientId: CLIENT_ID,
-  redirectUri: REDIRECT_URI.toLowerCase,
+  redirectUri: REDIRECT_URI,
   scope: SCOPES.split(/\s+/),
 }
 
@@ -29,12 +29,12 @@ const config = {
 class App extends Component {
   render() {
     return (
-      < Router basename={process.env.PUBLIC_URL} >
+      < Router basename="/studyabroad-demo" >
         <Security {...config}>
           <NavBar />
           <div className="container">
             <Route exact path="/" component={Home} />
-            <Route exact path='/callback' component={LoginCallback} />
+            <Route path='/implicit/callback' component={LoginCallback} />
             <SecureRoute exact path="/admin-dashboard" component={AdminDashboard} />
           </div>
         </Security>
