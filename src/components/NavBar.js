@@ -1,7 +1,7 @@
 import React from 'react';
 import { useOktaAuth } from '@okta/okta-react';
 import { NavLink, Link } from 'react-router-dom'
-import { Logo } from '%PUBLIC_URL%/img/su-logo.png"'
+import { Logo } from '../img/su-logo.png'
 
 /* A basic navbar with tabs Browse, How To, Contact Us, Admin, and Log Out (only if admin user is logged in */
 const NavBar = () => {
@@ -18,7 +18,7 @@ const NavBar = () => {
             <Link to="/" className="my-0 mr-md-auto align-self-start img-fluid"><img src={Logo} /></Link>
             <NavLink to="/" className="btn" >Search</NavLink>
             <a className="btn" href="https://www.southwestern.edu/study-abroad/contact-us/" target="_blank">Contact Us</a>
-            <NavLink className="btn" >Admin</NavLink>
+            <NavLink to="/admin-dashboard" className="btn" >Admin</NavLink>
             {/* Only display the logout tag in the navbar when an admin user is logged in */}
             {authState.isAuthenticated && <button style={{ "cursor": "pointer", "marginLeft": "5px", "marginRight": "14px", "color": "#212529" }} onClick={logout}>Log Out</button>}
         </div>
