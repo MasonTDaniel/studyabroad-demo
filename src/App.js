@@ -29,7 +29,7 @@ const config = {
 class App extends Component {
   render() {
     return (
-      <Router basename="/studyabroad-demo">
+      <Router basename={process.env.PUBLIC_URL}>
         <Security {...config}>
           <NavBar />
           <div className="container">
