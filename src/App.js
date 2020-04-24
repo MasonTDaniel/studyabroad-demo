@@ -19,7 +19,7 @@ const SCOPES = 'openid profile email';
 const config = {
   issuer: ISSUER,
   clientId: CLIENT_ID,
-  redirectUri: REDIRECT_URI,
+  redirectUri: REDIRECT_URI.toLowerCase,
   scope: SCOPES.split(/\s+/),
 }
 
