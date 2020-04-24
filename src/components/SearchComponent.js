@@ -25,6 +25,7 @@ class SearchComponent extends Component {
             })
             /* Examine the data and then map it to our initialPrograms array */
             .then(data => {
+                console.log("host: " + window.location.host);
                 initialPrograms = data.allPrograms.map((program) => {
                     return program
                 });

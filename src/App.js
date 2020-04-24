@@ -28,7 +28,6 @@ const config = {
   We also have a SecureRoute that signifies the user must be authenticated before viewing or accessing that page*/
 class App extends Component {
   render() {
-    console.log("host: " + window.location.host);
     return (
       < Router basename={process.env.PUBLIC_URL} >
         <Security {...config}>
