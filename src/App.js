@@ -13,6 +13,7 @@ const CLIENT_ID = '0oa5ecwl6wmPJFY0l4x6';
 const CALLBACK_PATH = '/implicit/callback';
 const ISSUER = `https://${OKTA_DOMAIN}/oauth2/default`;
 const HOST = window.location.host;
+console.log("host: " + window.location.host);
 const REDIRECT_URI = `http://${HOST}${CALLBACK_PATH}`;
 const SCOPES = 'openid profile email';
 /* Our config variable that stores information to be used by the Security tag, courtesy of Okta */
@@ -35,7 +36,7 @@ class App extends Component {
           <div className="container">
             <Route exact path="/" component={Home} />
             <Route path='/implicit/callback' component={LoginCallback} />
-            <SecureRoute exact path="/admin-dashboard" component={AdminDashboard} />
+            <SecureRoute path="/admin-dashboard" component={AdminDashboard} />
           </div>
         </Security>
       </Router>
