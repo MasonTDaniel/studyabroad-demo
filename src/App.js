@@ -33,7 +33,7 @@ class App extends Component {
         <Security {...config}>
           <NavBar />
           <div className="container">
-            <Route path="/" component={Home} />
+            <Route exact path="/" component={Home} />
             <Route path='/implicit/callback' component={LoginCallback} />
             <SecureRoute path="/admin-dashboard" component={AdminDashboard} />
           </div>
