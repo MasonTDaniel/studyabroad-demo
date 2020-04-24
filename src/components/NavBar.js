@@ -15,8 +15,8 @@ const NavBar = () => {
 
     return (
         <div id="nav" className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom shadow-sm">
-            <Link to={process.env.PUBLIC_URL + "/"} className="my-0 mr-md-auto align-self-start img-fluid"><img src={Logo} /></Link>
-            <NavLink to={process.env.PUBLIC_URL + "/"} className="btn" >Search</NavLink>
+            <Link to="/" className="my-0 mr-md-auto align-self-start img-fluid"><img src={Logo} /></Link>
+            <NavLink to="/" className="btn" >Search</NavLink>
             <a className="btn" href="https://www.southwestern.edu/study-abroad/contact-us/" target="_blank">Contact Us</a>
             <NavLink to="/admin-dashboard" className="btn" >Admin</NavLink>
             {/* Only display the logout tag in the navbar when an admin user is logged in */}
