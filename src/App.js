@@ -29,7 +29,7 @@ const config = {
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename="/">
         <Security {...config}>
           <NavBar />
           <div className="container">
