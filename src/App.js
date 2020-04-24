@@ -13,7 +13,6 @@ const CLIENT_ID = '0oa5ecwl6wmPJFY0l4x6';
 const CALLBACK_PATH = '/implicit/callback';
 const ISSUER = `https://${OKTA_DOMAIN}/oauth2/default`;
 const HOST = window.location.host;
-console.log("host: " + window.location.host);
 const REDIRECT_URI = `http://${HOST}${CALLBACK_PATH}`;
 const SCOPES = 'openid profile email';
 /* Our config variable that stores information to be used by the Security tag, courtesy of Okta */
@@ -29,8 +28,9 @@ const config = {
   We also have a SecureRoute that signifies the user must be authenticated before viewing or accessing that page*/
 class App extends Component {
   render() {
+    console.log("host: " + window.location.host);
     return (
-      <Router basename={process.env.PUBLIC_URL}>
+      < Router basename={process.env.PUBLIC_URL} >
         <Security {...config}>
           <NavBar />
           <div className="container">
@@ -39,7 +39,7 @@ class App extends Component {
             <SecureRoute path="/admin-dashboard" component={AdminDashboard} />
           </div>
         </Security>
-      </Router>
+      </Router >
     );
   }
 }
