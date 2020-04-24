@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Switch, BrowserRouter as Router, Route } from 'react-router-dom'
 import { Security, SecureRoute, LoginCallback } from '@okta/okta-react'
 import './App.css';
 import './css/bootstrap.min.css';
@@ -29,16 +29,18 @@ const config = {
 class App extends Component {
   render() {
     return (
-      <Router basename="/studyabroad-demo">
-        <Security {...config}>
-          <NavBar />
-          <div className="container">
-            <Route exact path="/" component={Home} />
-            <Route path='/implicit/callback' component={LoginCallback} />
-            <SecureRoute exact path="/admin-dashboard" component={AdminDashboard} />
-          </div>
-        </Security>
-      </Router>
+      <Switch>
+        <Router basename="/studyabroad-demo">
+          <Security {...config}>
+            <NavBar />
+            <div className="container">
+              <Route exact path="/" component={Home} />
+              <Route path='/implicit/callback' component={LoginCallback} />
+              <SecureRoute exact path="/admin-dashboard" component={AdminDashboard} />
+            </div>
+          </Security>
+        </Router>
+      </Switch>
     );
   }
 }
