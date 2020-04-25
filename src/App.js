@@ -32,6 +32,9 @@ class App extends Component {
       < Router basename="/studyabroad-demo" >
         <Security {...config}>
           <NavBar />
+          <div>
+            <p>{REDIRECT_URI}</p>
+          </div>
           <div className="container">
             <Route exact path="/" component={Home} />
             <Route path='/implicit/callback' component={LoginCallback} />
