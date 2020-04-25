@@ -10,7 +10,7 @@ import NavBar from './components/NavBar'
 /* Variables used by Okta for authentication */
 const OKTA_DOMAIN = 'dev-228327.okta.com';
 const CLIENT_ID = '0oa5ecwl6wmPJFY0l4x6';
-const CALLBACK_PATH = '/callback';
+const CALLBACK_PATH = '/implicit/callback';
 const ISSUER = `https://${OKTA_DOMAIN}/oauth2/default`;
 const HOST = window.location.host;
 const REDIRECT_URI = `http://${HOST}${CALLBACK_PATH}`;
