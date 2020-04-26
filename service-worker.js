@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/studyabroad-demo/precache-manifest.9dd84493f109cb58815cbe2168414016.js"
+  "/studyabroad-demo/precache-manifest.78b59723a5f6b41d300321618e531bca.js"
 );
 
 self.addEventListener('message', (event) => {
