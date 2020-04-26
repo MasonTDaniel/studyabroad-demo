@@ -4,7 +4,6 @@ import { Table } from 'reactstrap'
 class SearchResults extends Component {
     constructor(props) {
         super(props);
-        console.log('props: ' + this.props.filteredPrograms);
     }
     componentDidMount() {
 
@@ -20,8 +19,7 @@ class SearchResults extends Component {
                     <td>{program.name}</td>
                     <td>{program.language}</td>
                     <td>{program.cost}</td>
-                    {console.log(program.website)}
-                    <a href={program.website} target="_blank"><td>{program.website}</td></a>
+                    <td><a href={program.website} target="_blank" rel="noopener noreferrer">{program.website}</a></td>
                 </tr>
             )
 

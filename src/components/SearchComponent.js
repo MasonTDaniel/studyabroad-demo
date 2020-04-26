@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import SearchBar from '../components/SearchBar'
+import axios from 'axios';
 
 /* This is the parent component for the search feature. Its children include SearchBar and SearchResults */
 
@@ -18,22 +19,20 @@ class SearchComponent extends Component {
     componentDidMount() {
         let initialPrograms = [];
         /* Fetch the data from the database */
-        fetch('https://my-json-server.typicode.com/MasonTDaniel/capstonedummydata/db')
-            /* Response and promises */
+        axios.get('https://studyabroad-test-server.herokuapp.com/db')
+            /* Promise fulfilled */
             .then(response => {
-                return response.json();
-            })
-            /* Examine the data and then map it to our initialPrograms array */
-            .then(data => {
-                console.log("host: " + window.location.host);
-                initialPrograms = data.allPrograms.map((program) => {
+                console.log(response)
+                initialPrograms = response.data.allPrograms.map((program) => {
                     return program
                 });
                 /* Set our new state with the programs array filled with the programs from the array found in the data */
                 this.setState({
                     programs: initialPrograms
                 });
-            });
+            })
+        /* Examine the data and then map it to our initialPrograms array */
+
     }
 
     /* What we actually see on the webpage—SearchBar */

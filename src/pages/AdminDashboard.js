@@ -44,8 +44,16 @@ class AdminDashboard extends Component {
     }
     /* Run after initial render */
     componentDidMount() {
-        this.refreshPrograms();
-
+        /* Fetch the data from the database */
+        axios.get('https://studyabroad-test-server.herokuapp.com/db')
+            /* Store the response (an array of all programs) into programs */
+            .then(response => {
+                this.setState({
+                    programs: response.data.allPrograms
+                });
+            }, (error) => {
+                console.log(error);
+            });
     }
 
     /* Toggles Add a Program window */
@@ -141,7 +149,7 @@ class AdminDashboard extends Component {
             /* Store the response (an array of all programs) into programs */
             .then(response => {
                 this.setState({
-                    programs: response.data
+                    programs: response.data.allPrograms
                 });
             }, (error) => {
                 console.log(error);
@@ -150,7 +158,6 @@ class AdminDashboard extends Component {
 
     isDisabled = () => {
         let empty = '';
-        console.log("disabled before: " + this.state.isDisabled)
         if (!this.state.newProgramData.country === empty && !this.state.newProgramData.term === empty
             && !this.state.newProgramData.name === empty && !this.state.newProgramData.language === empty
             && !this.state.newProgramData.cost === empty && !this.state.newProgramData.website === empty) {

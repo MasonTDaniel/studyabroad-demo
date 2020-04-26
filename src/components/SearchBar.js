@@ -34,10 +34,10 @@ class SearchBar extends Component {
         //     'loc': this.state.filters.countryFilter
         // }
         // figure out axios
-        axios.get('https://my-json-server.typicode.com/MasonTDaniel/capstonedummydata/allPrograms')
+        axios.get('https://studyabroad-test-server.herokuapp.com/db')
             .then(response => {
                 this.setState({
-                    filteredProgramList: response.data,
+                    filteredProgramList: response.data.allPrograms,
                     displayResults: displayRes
                 });
             }, (error) => {
