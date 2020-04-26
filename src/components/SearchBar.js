@@ -51,6 +51,7 @@ class SearchBar extends Component {
 
     }
 
+    /* Filter the program array based on the dropdown filter input */
     filterPrograms = (programs) => {
         let filteredPrograms = [];
         let noFilter = 'Any';
@@ -69,6 +70,18 @@ class SearchBar extends Component {
         return filteredPrograms
     }
 
+    resetSearch = () => {
+        this.setState({
+            filters: {
+                termFilter: 'Any',
+                countryFilter: 'Any',
+                areaOfStudyFilter: 'Any',
+                languageFilter: 'Any'
+            },
+            filteredProgramList: [],
+            displayResults: false
+        });
+    }
 
     render() {
         // Take in the passed down program array and store it for easy access
@@ -182,6 +195,7 @@ class SearchBar extends Component {
 
                     <Button className="btn" style={{ "background": "#FFCD00", "border": "none", "color": "#000000", "marginLeft": "7px" }} onClick={this.onSearch.bind(this, true)}>Search
                     </Button>
+                    <Button className="btn-danger" onClick={this.resetSearch} >Reset</Button>
                 </div>
                 <div>
                     {this.state.displayResults && <SearchResults state={this.state} />}

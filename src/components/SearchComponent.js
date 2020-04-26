@@ -34,6 +34,9 @@ class SearchComponent extends Component {
 
     }
 
+    /* Reset search */
+
+
     /* What we actually see on the webpage—SearchBar */
     render() {
         return (

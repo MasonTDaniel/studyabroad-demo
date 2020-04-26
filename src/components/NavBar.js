@@ -15,7 +15,7 @@ const NavBar = () => {
 
     return (
         <div id="nav" className="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 border-bottom shadow-sm">
-            <Link to="/" className="my-0 mr-md-auto align-self-start img-fluid"><img src={Logo} alt="" /></Link>
+            <Link to="/" className="btn my-0 mr-md-auto align-self-start img-fluid "><img src={Logo} alt="" /></Link>
             <NavLink to="/" className="btn" >Search</NavLink>
             <a className="btn" href="https://www.southwestern.edu/study-abroad/contact-us/" target="_blank" rel="noopener noreferrer">Contact Us</a>
             <NavLink to="/admin-dashboard" className="btn" >Admin</NavLink>
