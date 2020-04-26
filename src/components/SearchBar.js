@@ -35,36 +35,38 @@ class SearchBar extends Component {
         // }
         // figure out axios
         let filteredPrograms = [];
-        console.log("country: " + this.state.filters.countryFilter)
-        console.log("term: " + this.state.filters.termFilter)
-        console.log("language: " + this.state.filters.languageFilter)
-        console.log("areaOfStudy: " + this.state.filters.areaOfStudyFilter)
         axios.get(`https://studyabroad-test-server.herokuapp.com/allPrograms`)
             .then(response => {
-                console.log("search response: " + JSON.stringify(response))
                 filteredPrograms = response.data.map((program) => {
                     return program
                 });
-                console.log("thisis the filtered program array: " + JSON.stringify(filteredPrograms.length))
-                for (let i = 0; i < filteredPrograms.length; i++) {
-                    if ((filteredPrograms[i].term !== this.state.filters.termFilter && this.state.filters.countryFilter !== 'Any')
-                        || (filteredPrograms[i].country !== this.state.filters.countryFilter && this.state.filters.countryFilter !== 'Any')
-                        || (filteredPrograms[i].areaOfStudy !== this.state.filters.areaOfStudyFilter && this.state.filters.countryFilter !== 'Any')
-                        || (filteredPrograms[i].language !== this.state.filters.languageFilter && this.state.filters.countryFilter !== 'Any')
-                    ) {
-                        filteredPrograms.splice(i, 1);
-                    }
-                }
-                console.log("filteredPrograms: " + filteredPrograms)
+                filteredPrograms = this.filterPrograms(filteredPrograms);
                 this.setState({
                     filteredProgramList: filteredPrograms,
                     displayResults: displayRes
                 });
-                console.log(" filteredProgramList (in state): " + this.state.filteredProgramList)
             }, (error) => {
                 console.log(error);
             });
 
+    }
+
+    filterPrograms = (programs) => {
+        let filteredPrograms = [];
+        let noFilter = 'Any';
+        console.log("programs (to be filtered): " + programs)
+        console.log("(programs[0].country: " + programs[0].country + ") === (this.state.filters.countryFilter: " + this.state.filters.countryFilter + ") == " + (programs[0].country === this.state.filters.countryFilter || this.state.filters.countryFilter === noFilter))
+        for (var i = 0; i < programs.length; i++) {
+            if ((programs[i].term === this.state.filters.termFilter || this.state.filters.termFilter === noFilter)
+                && (programs[i].country === this.state.filters.countryFilter || this.state.filters.countryFilter === noFilter)
+                && (programs[i].areaOfStudy === this.state.filters.areaOfStudyFilter || this.state.filters.areaOfStudyFilter === noFilter)
+                && (programs[i].language === this.state.filters.languageFilter || this.state.filters.languageFilter === noFilter)
+            ) {
+                filteredPrograms.push(programs[i]);
+            }
+        }
+
+        return filteredPrograms
     }
 
 

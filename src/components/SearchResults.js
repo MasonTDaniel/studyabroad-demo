@@ -17,6 +17,7 @@ class SearchResults extends Component {
                     <td>{program.country}</td>
                     <td>{program.term}</td>
                     <td>{program.name}</td>
+                    <td>{program.areaOfStudy}</td>
                     <td>{program.language}</td>
                     <td>{program.cost}</td>
                     <td><a href={program.website} target="_blank" rel="noopener noreferrer">{program.website}</a></td>
@@ -24,6 +25,13 @@ class SearchResults extends Component {
             )
 
         });
+        if (Array.isArray(filteredPrograms) && filteredPrograms.length === 0) {
+            return (
+                <div>
+                    <h5 style={{ "textAlign": "center" }}>No Results</h5>
+                </div>
+            )
+        }
         return (
             <div className="result">
                 <Table>
@@ -33,6 +41,7 @@ class SearchResults extends Component {
                             <th>Country</th>
                             <th>Term</th>
                             <th>Name</th>
+                            <th>Area of Study</th>
                             <th>Language</th>
                             <th>Cost</th>
                             <th>Website</th>
