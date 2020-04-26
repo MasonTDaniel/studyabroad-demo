@@ -178,7 +178,7 @@ class AdminDashboard extends Component {
                     <td>{program.name}</td>
                     <td>{program.language}</td>
                     <td>{program.cost}</td>
-                    <td>{program.website}</td>
+                    <td><a href={program.website} target="_blank" rel="noopener noreferrer">{program.website}</a></td>
                     <td style={{ "width": "10rem" }}>
                         <Button style={{ "width": "3.75rem", "marginRight": "0.2rem", "marginLeft": "0.2rem" }}
                             color="success" size="sm"

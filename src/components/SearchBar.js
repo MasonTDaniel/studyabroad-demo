@@ -34,12 +34,31 @@ class SearchBar extends Component {
         //     'loc': this.state.filters.countryFilter
         // }
         // figure out axios
-        axios.get('https://studyabroad-test-server.herokuapp.com/db')
+        let filteredPrograms = [];
+        console.log("country: " + this.state.filters.countryFilter)
+        console.log("term: " + this.state.filters.termFilter)
+        console.log("language: " + this.state.filters.languageFilter)
+        console.log("areaOfStudy: " + this.state.filters.areaOfStudyFilter)
+        axios.get(`https://studyabroad-test-server.herokuapp.com/allPrograms?term=${this.state.filters.termFilter}`)
             .then(response => {
+                console.log("search response: " + JSON.stringify(response))
+                filteredPrograms = response.data.map((program) => {
+                    return program
+                });
+                console.log("thisis the filtered program array: " + JSON.stringify(filteredPrograms.length))
+                for (let i = 0; i < filteredPrograms.length; i++) {
+                    if ((filteredPrograms[i].country !== this.state.filters.countryFilter && this.state.filters.countryFilter !== 'Any')
+                        || (filteredPrograms[i].language !== this.state.filters.languageFilter && this.state.filters.countryFilter !== 'Any')
+                        || (filteredPrograms[i].areaOfStudy !== this.state.filters.areaOfStudyFilter && this.state.filters.countryFilter !== 'Any')) {
+                        filteredPrograms.splice(i, 1);
+                    }
+                }
+                console.log("filteredPrograms: " + filteredPrograms)
                 this.setState({
-                    filteredProgramList: response.data.allPrograms,
+                    filteredProgramList: filteredPrograms,
                     displayResults: displayRes
                 });
+                console.log(" filteredProgramList (in state): " + this.state.filteredProgramList)
             }, (error) => {
                 console.log(error);
             });

@@ -22,7 +22,7 @@ class SearchComponent extends Component {
         axios.get('https://studyabroad-test-server.herokuapp.com/db')
             /* Promise fulfilled */
             .then(response => {
-                console.log(response)
+                console.log("get from /db: " + response.data.allPrograms)
                 initialPrograms = response.data.allPrograms.map((program) => {
                     return program
                 });
