@@ -20,7 +20,7 @@ class SearchResults extends Component {
                     <td>{program.areaOfStudy}</td>
                     <td>{program.language}</td>
                     <td>{program.cost}</td>
-                    <td><a href={program.website} target="_blank" rel="noopener noreferrer">{program.website}</a></td>
+                    <td><a href={"https://" + program.website} target="_blank" rel="noopener noreferrer">{program.website}</a></td>
                 </tr>
             )
 
