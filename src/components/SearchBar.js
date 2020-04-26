@@ -39,7 +39,7 @@ class SearchBar extends Component {
         console.log("term: " + this.state.filters.termFilter)
         console.log("language: " + this.state.filters.languageFilter)
         console.log("areaOfStudy: " + this.state.filters.areaOfStudyFilter)
-        axios.get(`https://studyabroad-test-server.herokuapp.com/allPrograms?term=${this.state.filters.termFilter}`)
+        axios.get(`https://studyabroad-test-server.herokuapp.com/allPrograms`)
             .then(response => {
                 console.log("search response: " + JSON.stringify(response))
                 filteredPrograms = response.data.map((program) => {
@@ -47,9 +47,11 @@ class SearchBar extends Component {
                 });
                 console.log("thisis the filtered program array: " + JSON.stringify(filteredPrograms.length))
                 for (let i = 0; i < filteredPrograms.length; i++) {
-                    if ((filteredPrograms[i].country !== this.state.filters.countryFilter && this.state.filters.countryFilter !== 'Any')
+                    if ((filteredPrograms[i].term !== this.state.filters.termFilter && this.state.filters.countryFilter !== 'Any')
+                        || (filteredPrograms[i].country !== this.state.filters.countryFilter && this.state.filters.countryFilter !== 'Any')
+                        || (filteredPrograms[i].areaOfStudy !== this.state.filters.areaOfStudyFilter && this.state.filters.countryFilter !== 'Any')
                         || (filteredPrograms[i].language !== this.state.filters.languageFilter && this.state.filters.countryFilter !== 'Any')
-                        || (filteredPrograms[i].areaOfStudy !== this.state.filters.areaOfStudyFilter && this.state.filters.countryFilter !== 'Any')) {
+                    ) {
                         filteredPrograms.splice(i, 1);
                     }
                 }
