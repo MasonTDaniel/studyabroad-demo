@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/studyabroad-demo/static/css/main.dc7d6018.chunk.css",
-    "main.js": "/studyabroad-demo/static/js/main.07b89368.chunk.js",
-    "main.js.map": "/studyabroad-demo/static/js/main.07b89368.chunk.js.map",
+    "main.js": "/studyabroad-demo/static/js/main.e650b2a7.chunk.js",
+    "main.js.map": "/studyabroad-demo/static/js/main.e650b2a7.chunk.js.map",
     "runtime-main.js": "/studyabroad-demo/static/js/runtime-main.7e70a3d9.js",
     "runtime-main.js.map": "/studyabroad-demo/static/js/runtime-main.7e70a3d9.js.map",
-    "static/js/2.c1db5210.chunk.js": "/studyabroad-demo/static/js/2.c1db5210.chunk.js",
-    "static/js/2.c1db5210.chunk.js.map": "/studyabroad-demo/static/js/2.c1db5210.chunk.js.map",
+    "static/js/2.366b517c.chunk.js": "/studyabroad-demo/static/js/2.366b517c.chunk.js",
+    "static/js/2.366b517c.chunk.js.map": "/studyabroad-demo/static/js/2.366b517c.chunk.js.map",
     "index.html": "/studyabroad-demo/index.html",
-    "precache-manifest.9428ee0ca7a3d692b3959e110dfd8dbb.js": "/studyabroad-demo/precache-manifest.9428ee0ca7a3d692b3959e110dfd8dbb.js",
+    "precache-manifest.87594b5c6be630070f525d515aa43703.js": "/studyabroad-demo/precache-manifest.87594b5c6be630070f525d515aa43703.js",
     "service-worker.js": "/studyabroad-demo/service-worker.js",
     "static/css/main.dc7d6018.chunk.css.map": "/studyabroad-demo/static/css/main.dc7d6018.chunk.css.map",
-    "static/js/2.c1db5210.chunk.js.LICENSE.txt": "/studyabroad-demo/static/js/2.c1db5210.chunk.js.LICENSE.txt"
+    "static/js/2.366b517c.chunk.js.LICENSE.txt": "/studyabroad-demo/static/js/2.366b517c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.7e70a3d9.js",
-    "static/js/2.c1db5210.chunk.js",
+    "static/js/2.366b517c.chunk.js",
     "static/css/main.dc7d6018.chunk.css",
-    "static/js/main.07b89368.chunk.js"
+    "static/js/main.e650b2a7.chunk.js"
   ]
 }
