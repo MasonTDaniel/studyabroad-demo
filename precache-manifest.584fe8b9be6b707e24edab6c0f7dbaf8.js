@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9a656d3d32b9e036aed4a2fbf52f5ffa",
+    "revision": "907403f8b546911e7e27240ed29f9776",
     "url": "/studyabroad-demo/index.html"
   },
   {
-    "revision": "5ec33458028af83a8b55",
+    "revision": "7c26aec2d5674f67121c",
     "url": "/studyabroad-demo/static/css/main.df673971.chunk.css"
   },
   {
@@ -16,15 +16,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/studyabroad-demo/static/js/2.366b517c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5ec33458028af83a8b55",
-    "url": "/studyabroad-demo/static/js/main.afd3c1f8.chunk.js"
+    "revision": "7c26aec2d5674f67121c",
+    "url": "/studyabroad-demo/static/js/main.e2a02cfd.chunk.js"
   },
   {
     "revision": "2004cd11ccd81019ca9a",
     "url": "/studyabroad-demo/static/js/runtime-main.7e70a3d9.js"
   },
   {
-    "revision": "f311a69b79e0251492a52170575209b7",
-    "url": "/studyabroad-demo/static/media/su-icon.f311a69b.png"
+    "revision": "3c1dbbf4dcb6a052e7396114fa549efe",
+    "url": "/studyabroad-demo/static/media/su-logo.3c1dbbf4.png"
   }
 ]);
