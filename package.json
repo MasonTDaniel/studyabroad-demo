@@ -2,7 +2,7 @@
   "name": "frontenddev",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://masontdaniel.github.io/studyabroad-demo/",
+  "homepage": "http://masontdaniel.github.io/studyabroad-demo",
   "dependencies": {
     "@okta/okta-react": "^3.0.1",
     "@okta/okta-signin-widget": "^3.9.0",
