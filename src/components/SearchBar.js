@@ -36,12 +36,10 @@ class SearchBar extends Component {
         // figure out axios
         axios.get('https://my-json-server.typicode.com/MasonTDaniel/capstonedummydata/allPrograms')
             .then(response => {
-                console.log('about to search, displayResults: ' + this.state.displayResults)
                 this.setState({
                     filteredProgramList: response.data,
                     displayResults: displayRes
                 });
-                console.log('searched, displayResults: ' + this.state.displayResults)
             }, (error) => {
                 console.log(error);
             });
@@ -161,7 +159,6 @@ class SearchBar extends Component {
 
                     <Button className="btn" style={{ "background": "#FFCD00", "border": "none", "color": "#000000", "marginLeft": "7px" }} onClick={this.onSearch.bind(this, true)}>Search
                     </Button>
-                    {console.log('current filters: ' + this.state.filters)}
                 </div>
                 <div>
                     {this.state.displayResults && <SearchResults state={this.state} />}
