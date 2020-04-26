@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "15f08b2a689572daccb3e1ea671f9a42",
+    "revision": "64aa6b13db26ef8e52aceaffb20bbaf1",
     "url": "/studyabroad-demo/index.html"
   },
   {
-    "revision": "551b2dcfde88483f1ad7",
+    "revision": "e694a6f02bd060be2962",
     "url": "/studyabroad-demo/static/css/main.dc7d6018.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/studyabroad-demo/static/js/2.366b517c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "551b2dcfde88483f1ad7",
-    "url": "/studyabroad-demo/static/js/main.cb43b2e3.chunk.js"
+    "revision": "e694a6f02bd060be2962",
+    "url": "/studyabroad-demo/static/js/main.cd34b2ec.chunk.js"
   },
   {
     "revision": "2004cd11ccd81019ca9a",
