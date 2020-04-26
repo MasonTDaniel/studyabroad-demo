@@ -214,8 +214,7 @@ class AdminDashboard extends Component {
         });
         return (
             <div>
-
-                <Button color="primary" onClick={this.toggleNewProgramModal.bind(this)}>Add Program</Button>
+                <Button style={{ "marginBottom": "0.5rem" }} color="primary" onClick={this.toggleNewProgramModal.bind(this)}>Add Program</Button>
                 <Modal isOpen={this.state.newProgramModal} toggle={this.toggleNewProgramModal.bind(this)}>
                     <ModalHeader toggle={this.toggleNewProgramModal.bind(this)}>Add a new program</ModalHeader>
                     <ModalBody>

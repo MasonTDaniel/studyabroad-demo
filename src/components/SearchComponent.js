@@ -41,7 +41,7 @@ class SearchComponent extends Component {
     render() {
         return (
             <div>
-                <h5 style={{ "alignSelf": "center" }}>Search for study abroad programs recommended by SU below</h5>
+                <h5 style={{ "textAlign": "center" }}>Search for study abroad programs recommended by SU below</h5>
                 <SearchBar state={this.state} />
             </div>
         )
