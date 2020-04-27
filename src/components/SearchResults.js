@@ -2,18 +2,12 @@ import React, { Component } from 'react'
 import { Table } from 'reactstrap'
 
 class SearchResults extends Component {
-    constructor(props) {
-        super(props);
-    }
-    componentDidMount() {
 
-    }
     render() {
         // Make a table of programs and store it
         let filteredPrograms = this.props.state.filteredProgramList.map((program) => {
             return (
                 <tr key={program.id}>
-                    <td>{program.id}</td>
                     <td>{program.country}</td>
                     <td>{program.term}</td>
                     <td>{program.name}</td>
@@ -37,7 +31,6 @@ class SearchResults extends Component {
                 <Table>
                     <thead>
                         <tr>
-                            <th>id</th>
                             <th>Country</th>
                             <th>Term</th>
                             <th>Name</th>
