@@ -93,6 +93,8 @@ class SearchBar extends Component {
         allProgramTerms = this.getUnique(allProgramTerms)
         //  Sort the terms into alphabetical order 
         allProgramTerms.sort()
+        // Remove 'Any' from all programs with 'Any' as term (to prevent from duplicate 'Any' options in dropdown: mostly for area of study, but implemented for all filters for consistency)
+        allProgramTerms = allProgramTerms.filter(e => e !== 'Any');
         // Add 'Any' option to the beginning of the array
         allProgramTerms.unshift('Any')
         //  Make it into an array of options so that we can insert them into our dropdown (below) 
@@ -106,6 +108,7 @@ class SearchBar extends Component {
         );
         allProgramCountries = this.getUnique(allProgramCountries)
         allProgramCountries.sort()
+        allProgramCountries = allProgramCountries.filter(e => e !== 'Any');
         allProgramCountries.unshift('Any')
         allProgramCountries = allProgramCountries.map((programCountryValue, i) =>
             <option key={i}>{programCountryValue}</option>
@@ -117,6 +120,7 @@ class SearchBar extends Component {
         );
         allProgramAreasOfStudy = this.getUnique(allProgramAreasOfStudy)
         allProgramAreasOfStudy.sort()
+        allProgramAreasOfStudy = allProgramAreasOfStudy.filter(e => e !== 'Any');
         allProgramAreasOfStudy.unshift('Any')
         allProgramAreasOfStudy = allProgramAreasOfStudy.map((programAreaOfStudyValue, i) =>
             <option key={i}>{programAreaOfStudyValue}</option>
@@ -128,6 +132,7 @@ class SearchBar extends Component {
         );
         allProgramLanguages = this.getUnique(allProgramLanguages)
         allProgramLanguages.sort()
+        allProgramLanguages = allProgramLanguages.filter(e => e !== 'Any');
         allProgramLanguages.unshift('Any')
         allProgramLanguages = allProgramLanguages.map((programLanguageValue, i) =>
             <option key={i}>{programLanguageValue}</option>
@@ -136,10 +141,10 @@ class SearchBar extends Component {
         /* Display 4 dropdowns (populated with terms, countries, areas of study, and languages respectively) and a Search button */
         return (
             <div>
-                <div style={{ "justifyContent": "space-evenly", "margin": "3rem" }} className="form-inline">
+                <div style={{ "justifyContent": "space-evenly", "marginTop": "1rem" }} className="form-inline">
                     <div>
                         <FormGroup >
-                            <Label style={{ "marginRight": "0.5rem" }} for="termFilter">Term</Label>
+                            <Label style={{ "marginRight": "0.25rem" }} for="termFilter">Term</Label>
                             <Input type="select" value={this.state.filters.termFilter} onChange={(e) => {
                                 let { filters } = this.state;
                                 filters.termFilter = e.target.value;
@@ -151,7 +156,7 @@ class SearchBar extends Component {
                     </div>
                     <div className="mr-20 ml-20">
                         <FormGroup>
-                            <Label style={{ "marginRight": "0.5rem" }} for="countryFilter">Country</Label>
+                            <Label style={{ "marginRight": "0.25rem", "marginLeft": "0.75rem" }} for="countryFilter">Country</Label>
                             <Input type="select" id="countryFilter" value={this.state.filters.countryFilter} onChange={(e) => {
                                 let { filters } = this.state;
                                 filters.countryFilter = e.target.value;
@@ -163,7 +168,7 @@ class SearchBar extends Component {
                     </div>
                     <div className="mr-20 ml-20">
                         <FormGroup >
-                            <Label style={{ "marginRight": "0.5rem" }} for="areaOfStudyFilter">Area of Study</Label>
+                            <Label style={{ "marginRight": "0.25rem", "marginLeft": "0.75rem" }} for="areaOfStudyFilter">Area of Study</Label>
                             <Input type="select" id="areaOfStudyFilter" value={this.state.filters.areaOfStudyFilter} onChange={(e) => {
                                 let { filters } = this.state;
                                 filters.areaOfStudyFilter = e.target.value;
@@ -175,7 +180,7 @@ class SearchBar extends Component {
                     </div>
                     <div className="mr-20 ml-20">
                         <FormGroup >
-                            <Label style={{ "marginRight": "0.5rem" }} for="languageFilter">Language</Label>
+                            <Label style={{ "marginRight": "0.25rem", "marginLeft": "0.75rem" }} for="languageFilter">Language</Label>
                             <Input type="select" id="languageFilter" value={this.state.filters.languageFilter} onChange={(e) => {
                                 let { filters } = this.state;
                                 filters.languageFilter = e.target.value;
