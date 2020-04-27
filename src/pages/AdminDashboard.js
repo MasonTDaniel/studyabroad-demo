@@ -162,19 +162,10 @@ class AdminDashboard extends Component {
 
     isDisabled = () => {
         let empty = '';
-        console.log("Filled yet? ****************")
-        console.log("country: " + this.state.newProgramData.country + ", empty: " + empty)
-        console.log("countryFilled: " + !(this.state.newProgramData.country === empty))
-        console.log("termFilled: " + !(this.state.newProgramData.term === empty))
-        console.log("nameFilled: " + !(this.state.newProgramData.name === empty))
-        console.log("areaFilled: " + !(this.state.newProgramData.areaOfStudy === empty))
-        console.log("langFilled: " + !(this.state.newProgramData.language === empty))
-        console.log("costFilled: " + !(this.state.newProgramData.cost === empty))
-        console.log("webFilled: " + !(this.state.newProgramData.wesbite === empty))
-        if (!this.state.newProgramData.country === empty && !this.state.newProgramData.term === empty
-            && !this.state.newProgramData.name === empty && !this.state.newProgramData.areaOfStudy === empty
-            && !this.state.newProgramData.language === empty && !this.state.newProgramData.cost === empty
-            && !this.state.newProgramData.website === empty) {
+        if (!this.state.newProgramData.country == empty && !this.state.newProgramData.term == empty
+            && !this.state.newProgramData.name == empty && !this.state.newProgramData.areaOfStudy == empty
+            && !this.state.newProgramData.language == empty && !this.state.newProgramData.cost == empty
+            && !this.state.newProgramData.website == empty) {
             this.setState({
                 isDisabled: false
             })
