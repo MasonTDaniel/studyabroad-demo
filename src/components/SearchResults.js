@@ -22,7 +22,7 @@ class SearchResults extends Component {
         if (Array.isArray(filteredPrograms) && filteredPrograms.length === 0) {
             return (
                 <div>
-                    <h5 style={{ "textAlign": "center" }}>No Results</h5>
+                    <h5 style={{ "textAlign": "center", "marginTop": "2rem" }}>No Results</h5>
                 </div>
             )
         }

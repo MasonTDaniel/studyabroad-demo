@@ -38,7 +38,8 @@ class SearchComponent extends Component {
     render() {
         return (
             <div>
-                <h5 style={{ "textAlign": "center", "color": "gray" }}>(Demo Version)</h5>
+                <h6 style={{ "textAlign": "right", "color": "gray" }}>
+                    (Demo Version. <a href="https://github.com/MasonTDaniel/studyabroad-demo" target="_blank" rel="noopener noreferrer"> Code for this UI demo</a> and <a href="https://github.com/MasonTDaniel/study-abroad-recommender" target="_blank" rel="noopener noreferrer">Code for the whole project</a>)</h6>
                 <h5 style={{ "textAlign": "center" }}>Search for study abroad programs recommended by SU below</h5>
                 <SearchBar state={this.state} />
             </div>

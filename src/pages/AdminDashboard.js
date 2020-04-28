@@ -205,6 +205,8 @@ class AdminDashboard extends Component {
         });
         return (
             <div>
+                <h6 style={{ "textAlign": "right", "color": "gray" }}>
+                    (Demo Version. <a href="https://github.com/MasonTDaniel/studyabroad-demo" target="_blank" rel="noopener noreferrer"> Code for this UI demo</a> and <a href="https://github.com/MasonTDaniel/study-abroad-recommender" target="_blank" rel="noopener noreferrer">Code for the whole project</a>)</h6>
                 <Button style={{ "marginBottom": "0.5rem" }} color="primary" onClick={this.toggleNewProgramModal.bind(this)}>Add Program</Button>
                 <Modal isOpen={this.state.newProgramModal} toggle={this.toggleNewProgramModal.bind(this)}>
                     <ModalHeader toggle={this.toggleNewProgramModal.bind(this)}>Add a new program</ModalHeader>
