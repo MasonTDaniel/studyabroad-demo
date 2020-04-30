@@ -8,8 +8,8 @@ class SearchResults extends Component {
         let filteredPrograms = this.props.state.filteredProgramList.map((program) => {
             return (
                 <tr key={program.id}>
-                    <td>{program.country}</td>
                     <td>{program.term}</td>
+                    <td>{program.country}</td>
                     <td>{program.name}</td>
                     <td>{program.areaOfStudy}</td>
                     <td>{program.language}</td>
@@ -31,8 +31,8 @@ class SearchResults extends Component {
                 <Table>
                     <thead>
                         <tr>
-                            <th>Country</th>
                             <th>Term</th>
+                            <th>Country</th>
                             <th>Name</th>
                             <th>Area of Study</th>
                             <th>Language</th>

@@ -182,8 +182,8 @@ class AdminDashboard extends Component {
             return (
                 <tr key={program.id}>
                     <td>{program.id}</td>
-                    <td>{program.country}</td>
                     <td>{program.term}</td>
+                    <td>{program.country}</td>
                     <td>{program.name}</td>
                     <td>{program.areaOfStudy}</td>
                     <td>{program.language}</td>
@@ -212,21 +212,21 @@ class AdminDashboard extends Component {
                     <ModalHeader toggle={this.toggleNewProgramModal.bind(this)}>Add a new program</ModalHeader>
                     <ModalBody>
                         <FormGroup>
+                            <Label for="Term">Term</Label>
+                            <Input id="term" placeholder='e.g. " Fall"' value={this.state.newProgramData.term} onChange={(e) => {
+                                let { newProgramData } = this.state;
+                                newProgramData.term = e.target.value;
+                                this.setState({ newProgramData });
+                                this.isDisabled();
+                            }} />
+                        </FormGroup>
+                        <FormGroup>
                             <Label for="Country">Country</Label>
                             <Input id="country" placeholder='e.g. " Spain"' value={this.state.newProgramData.country} onChange={(e) => {
                                 let { newProgramData } = this.state;
                                 newProgramData.country = e.target.value;
                                 this.setState({ newProgramData });
                                 console.log(this.state.newProgramData.country)
-                                this.isDisabled();
-                            }} />
-                        </FormGroup>
-                        <FormGroup>
-                            <Label for="Term">Term</Label>
-                            <Input id="term" placeholder='e.g. " Fall"' value={this.state.newProgramData.term} onChange={(e) => {
-                                let { newProgramData } = this.state;
-                                newProgramData.term = e.target.value;
-                                this.setState({ newProgramData });
                                 this.isDisabled();
                             }} />
                         </FormGroup>
@@ -286,18 +286,18 @@ class AdminDashboard extends Component {
                     <ModalHeader toggle={this.toggleEditProgramModal.bind(this)}>Edit a program</ModalHeader>
                     <ModalBody>
                         <FormGroup>
-                            <Label for="Country">Country</Label>
-                            <Input id="country" placeholder='e.g. " Spain"' value={this.state.editProgramData.country} onChange={(e) => {
-                                let { editProgramData } = this.state;
-                                editProgramData.country = e.target.value;
-                                this.setState({ editProgramData });
-                            }} />
-                        </FormGroup>
-                        <FormGroup>
                             <Label for="Term">Term</Label>
                             <Input id="term" placeholder='e.g. " Fall"' value={this.state.editProgramData.term} onChange={(e) => {
                                 let { editProgramData } = this.state;
                                 editProgramData.term = e.target.value;
+                                this.setState({ editProgramData });
+                            }} />
+                        </FormGroup>
+                        <FormGroup>
+                            <Label for="Country">Country</Label>
+                            <Input id="country" placeholder='e.g. " Spain"' value={this.state.editProgramData.country} onChange={(e) => {
+                                let { editProgramData } = this.state;
+                                editProgramData.country = e.target.value;
                                 this.setState({ editProgramData });
                             }} />
                         </FormGroup>
@@ -352,8 +352,8 @@ class AdminDashboard extends Component {
                     <thead>
                         <tr>
                             <th>id</th>
-                            <th>Country</th>
                             <th>Term</th>
+                            <th>Country</th>
                             <th>Name</th>
                             <th>Area Of Study</th>
                             <th>Language</th>
