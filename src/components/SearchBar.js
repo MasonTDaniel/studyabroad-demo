@@ -156,7 +156,7 @@ class SearchBar extends Component {
                     </div>
                     <div className="mr-20 ml-20">
                         <FormGroup>
-                            <Label style={{ "marginRight": "0.25rem", "marginLeft": "0.75rem" }} for="countryFilter">Country</Label>
+                            <Label style={{ "marginRight": "0.25rem", "marginLeft": "0.5rem" }} for="countryFilter">Country</Label>
                             <Input type="select" id="countryFilter" value={this.state.filters.countryFilter} onChange={(e) => {
                                 let { filters } = this.state;
                                 filters.countryFilter = e.target.value;
@@ -168,7 +168,7 @@ class SearchBar extends Component {
                     </div>
                     <div className="mr-20 ml-20">
                         <FormGroup >
-                            <Label style={{ "marginRight": "0.25rem", "marginLeft": "0.75rem" }} for="areaOfStudyFilter">Area of Study</Label>
+                            <Label style={{ "marginRight": "0.25rem", "marginLeft": "0.5rem" }} for="areaOfStudyFilter">Area of Study</Label>
                             <Input type="select" id="areaOfStudyFilter" value={this.state.filters.areaOfStudyFilter} onChange={(e) => {
                                 let { filters } = this.state;
                                 filters.areaOfStudyFilter = e.target.value;
@@ -180,7 +180,7 @@ class SearchBar extends Component {
                     </div>
                     <div className="mr-20 ml-20">
                         <FormGroup >
-                            <Label style={{ "marginRight": "0.25rem", "marginLeft": "0.75rem" }} for="languageFilter">Language</Label>
+                            <Label style={{ "marginRight": "0.25rem", "marginLeft": "0.5rem" }} for="languageFilter">Language</Label>
                             <Input type="select" id="languageFilter" value={this.state.filters.languageFilter} onChange={(e) => {
                                 let { filters } = this.state;
                                 filters.languageFilter = e.target.value;
