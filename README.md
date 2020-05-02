@@ -6,8 +6,8 @@ This demo does not include authentication so that admin permissions may be demon
 Backed by a hosted JSON server filled with dummy data — i.e. feel free to add, edit, and delete programs.
 
 ## Team
-Alyssa Case
-Daniel Merritt
-Luke Yates
-Ryan Wheeler
-Mason Daniel
+-Alyssa Case
+-Daniel Merritt
+-Luke Yates
+-Ryan Wheeler
+-Mason Daniel
