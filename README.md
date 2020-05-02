@@ -1,5 +1,6 @@
 # Project
-This is a demo of the user interface for our Computer Science 2020 Capstone Project. Developed by Mason Daniel
+This is a demo of the user interface for our Computer Science 2020 Capstone Project, Developed by Mason Daniel.
+See the full project here: https://github.com/MasonTDaniel/study-abroad-recommender
 
 ## Notes
 This demo does not include authentication so that admin permissions may be demonstrated.
